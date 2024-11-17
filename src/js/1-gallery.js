@@ -1,3 +1,8 @@
+// Описаний в документації
+import SimpleLightbox from "simplelightbox";
+// Додатковий імпорт стилів
+import "simplelightbox/dist/simple-lightbox.min.css";
+
 const images = [
   {
     preview:
@@ -83,3 +88,9 @@ function createMarkup(images) {
 }
 
 galleryContainer.insertAdjacentHTML("beforeend", galleryMarkup);
+
+
+let gallery = new SimpleLightbox('.gallery a', {
+  captionsData: "alt",
+  captionDelay: 250,
+});
